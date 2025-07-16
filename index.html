@@ -293,6 +293,39 @@
             font-size: 1rem;
         }
         
+        /* 价格公示板块样式 */
+        .prices {
+            padding: 80px 0;
+            background-color: var(--white-color);
+        }
+        
+        .price-image-container {
+            margin: 40px auto;
+            max-width: 900px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .price-image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--shadow-color);
+        }
+        
+        .price-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .price-note {
+            text-align: center;
+            color: #666;
+            margin-top: 30px;
+            font-size: 1rem;
+        }
+        
         /* 联系方式区域样式 */
         .contact {
             background-color: var(--light-color);
@@ -325,6 +358,12 @@
         }
         
         .contact-icon {
+            font-size: 24px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .floating-contact .contact-icon {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -462,6 +501,18 @@
         .close-btn:hover {
             background-color: #0069d9;
         }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .price-note {
+                font-size: 0.9rem;
+                padding: 0 15px;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -486,6 +537,7 @@
             <a href="#" class="nav-link">首页</a>
             <a href="#about-section" class="nav-link">关于我们</a>
             <a href="#services-section" class="nav-link">服务</a>
+            <a href="#prices-section" class="nav-link">价格</a>
             <a href="#footer-contact-section" class="nav-link">联系我们</a>
         </div>
     </nav>
@@ -510,7 +562,6 @@
                 <p>未来，城舟专车将继续秉承"用户至上"的理念，不断创新服务模式，拓展业务领域，致力于成为行业领先的出行解决方案提供商。</p>
             </div>
             <div class="about-image">
-                <!-- 替换为新图片 -->
                 <img src="https://img.picui.cn/free/2025/06/30/68624c2c30fb6.png" alt="城舟专车服务展示">
             </div>
         </div>
@@ -536,6 +587,15 @@
                 <p>专业客服团队7×24小时在线，快速响应并解决您在乘车过程中遇到的任何问题，让您出行无忧。</p>
             </div>
         </div>
+    </div>
+    
+    <!-- 价格公示板块 -->
+    <div class="prices container" id="prices-section">
+        <h2 class="section-title">价格公示</h2>
+        <div class="price-image-container">
+            <img src="https://youke1.picui.cn/s1/2025/07/16/68770ee14e8b5.jpg" alt="城舟专车价格表" class="price-image">
+        </div>
+        <p class="price-note">注：以上价格仅供参考，特殊时段（如高峰时段、节假日）可能会有溢价，具体以实际下单时显示价格为准。</p>
     </div>
     
     <!-- 悬浮联系方式框 -->
@@ -671,4 +731,4 @@
         });
     </script>
 </body>
-</html>    
+</html>
